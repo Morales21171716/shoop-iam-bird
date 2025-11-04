@@ -1,0 +1,41 @@
+import { ShieldCheck, Youtube, Send, Ticket } from 'lucide-react';
+import ProductGrid from './components/product-grid';
+
+export default function Home() {
+
+  return (
+    <main className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <header className="mb-12 text-center">
+            <div className="flex items-center justify-center gap-4">
+                <h1 className="animate-shiny-gold-text text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">
+                  Shoop <span translate="no">iam Bird</span>
+                </h1>
+                <ShieldCheck className="h-12 w-12 shrink-0 animate-shiny-gold-text sm:h-16 sm:w-16 md:h-20 md:w-20"/>
+            </div>
+        </header>
+
+        <div>
+            <h2 className="text-3xl font-bold mb-8 text-center animate-shiny-gold-text">Nuestros Productos</h2>
+            <ProductGrid />
+        </div>
+
+        <footer className="mt-16 border-t pt-8 text-center text-muted-foreground border-border/50">
+            <p className="font-semibold">©Creador©byIamBird</p>
+            <div className="mt-4 flex justify-center gap-4">
+                <a href="https://youtube.com/@iambiird?si=GikejoyPsYmp_qq2" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="p-2 rounded-full hover:bg-gray-700">
+                    <Youtube />
+                </a>
+                <a href="https://t.me/+ms9tmkM-PqAzMmIx" target="_blank" rel="noopener noreferrer" aria-label="Telegram" className="p-2 rounded-full hover:bg-gray-700">
+                    <Send />
+                </a>
+                 <a href="https://vt.tiktok.com/ZSyrTpVVG/" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="p-2 rounded-full hover:bg-gray-700">
+                    <Ticket />
+                </a>
+            </div>
+            <p className="mx-auto mt-6 max-w-2xl text-xs">
+                Para comprar, contáctanos directamente por Telegram.
+            </p>
+        </footer>
+    </main>
+  );
+}

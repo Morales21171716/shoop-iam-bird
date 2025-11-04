@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 90%;
+    --card: 0 0% 15%;
+    --card-foreground: 0 0% 90%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 90%;
+    --primary: 0 72% 51%; /* #dc2626 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 25%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 0 0% 25%;
+    --muted-foreground: 0 0% 63%;
+    --accent: 0 0% 25%;
+    --accent-foreground: 0 0% 90%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 0 72% 51%;
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 0 0% 8%; /* #141414 */
+    --foreground: 0 0% 90%; /* #e5e7eb */
+    --card: 0 0% 15%; /* #262626 */
+    --card-foreground: 0 0% 90%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 90%;
+    --primary: 0 72% 51%; /* #dc2626 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 25%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 0 0% 25%;
+    --muted-foreground: 0 0% 63%; /* #a1a1aa */
+    --accent: 0 0% 25%;
+    --accent-foreground: 0 0% 90%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 25%; /* #404040 */
+    --input: 0 0% 25%;
+    --ring: 0 72% 51%;
+  }
+}
+ 
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+.animate-shiny-gold-text {
+    animation: shiny-gold-text 3s infinite;
+}
+@keyframes shiny-gold-text {
+    0%, 100% {
+        color: #ffd700;
+        text-shadow: 0 0 8px #ffd700, 0 0 12px #f0a500;
+    }
+    50% {
+        color: #f5f5dc;
+        text-shadow: 0 0 5px #f5f5dc;
+    }
+}
+.animate-shiny-red-black-text {
+    animation: shiny-red-black 4s infinite;
+}
+@keyframes shiny-red-black {
+    0%, 100% { color: #ff0000; text-shadow: 0 0 5px #ff0000; }
+    50% { color: #000000; text-shadow: 0 0 5px #ffffff; }
+}
+.bg-primary-anim {
+     animation: shiny-red-black-bg 4s infinite;
+}
+@keyframes shiny-red-black-bg {
+    0%, 100% { background-color: hsl(var(--primary)); box-shadow: 0 0 8px hsl(var(--primary)); }
+    50% { background-color: hsl(var(--secondary)); box-shadow: 0 0 8px hsl(var(--primary)); }
+}
+.bg-green-anim {
+    animation: shiny-green-bg 4s infinite;
+}
+@keyframes shiny-green-bg {
+    0%, 100% { background-color: #006400; box-shadow: 0 0 8px #00e600;}
+    50% { background-color: hsl(var(--secondary)); box-shadow: 0 0 8px hsl(var(--secondary)); }
+}
+.animate-shiny-red-gold-text {
+    animation: shiny-red-gold-text 3s infinite;
+}
+@keyframes shiny-red-gold-text {
+    0%, 100% { color: #ff4500; text-shadow: 0 0 8px #ffd700, 0 0 12px #ff4500; }
+    50% { color: #ffd700; text-shadow: 0 0 8px #ffd700; }
+}
